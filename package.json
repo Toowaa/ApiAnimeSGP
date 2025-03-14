@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource-variable/open-sans": "^5.2.5",
     "embla-carousel-react": "^8.5.2",
     "get-apis": "file:",
     "lucide-react": "^0.481.0",
