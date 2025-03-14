@@ -19,3 +19,12 @@ export async function TierlistApi(){
   const result: ApiResponse = await res.json();
   return result;
 }
+
+export async function AllAnimesApi(page: number = 1) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/anime?page=${page}`);
+  if (!res.ok) {
+    throw new Error('Error al obtener los datos');
+  }
+  const result: ApiResponse = await res.json();
+  return result;
+}

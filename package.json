@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource-variable/montserrat": "^5.2.5",
     "@fontsource-variable/open-sans": "^5.2.5",
     "embla-carousel-react": "^8.5.2",
     "get-apis": "file:",
