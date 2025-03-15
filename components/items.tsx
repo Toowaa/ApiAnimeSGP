@@ -2,15 +2,12 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+
+
 
 export default function Cards() {
-  const router = useRouter();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalData, setModalData] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  
+
 
   const services = [
     {
@@ -34,21 +31,6 @@ export default function Cards() {
       title: "reviews",
     },
   ];
-
-  const fetchData = async (url :string) => {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setModalData(data.data); // Asume que la API devuelve un objeto con un campo 'data'
-      setIsModalOpen(true);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
-  const handleSearch = (event :React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value);
-  };
 
  
 
@@ -80,7 +62,7 @@ export default function Cards() {
               </h3>
               <div className="flex flex-col items-end mt-auto mb-5">
                 <button
-                  onClick={() => fetchData(`https://api.jikan.moe/v4${service.id}`)}
+             
                   className="group flex items-center space-x-2 text-sm hover:text-purple-200 transition-colors"
                 >
                   <span className="relative group">
@@ -115,7 +97,7 @@ export default function Cards() {
               <h3 className="mt-3 mb-4 text-xl font-bold">{service.title}</h3>
               <div className="flex flex-col items-end mt-auto mb-5">
                 <button
-                  onClick={() => fetchData(`https://api.jikan.moe/v4${service.id}`)}
+            
                   className="group flex items-center space-x-2 text-sm hover:text-purple-200 transition-colors"
                 >
                   <span className="relative group">
@@ -130,30 +112,6 @@ export default function Cards() {
         </div>
       </div>
 
-      {/* Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 bg-base-letter  flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg w-11/12 max-w-2xl">
-            <h2 className="text-xl font-bold mb-4 text-letter-title">Detalles</h2>
-            <input
-              type="text"
-              placeholder="Buscar..."
-              value={searchTerm}
-              onChange={handleSearch}
-              className="mb-4 p-2 border border-gray-300 rounded"
-            />
-            <div className="max-h-96 overflow-y-auto">
-             
-            </div>
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="mt-4 px-4 py-2 bg-purple-600 text-white rounded"
-            >
-              Cerrar
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

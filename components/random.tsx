@@ -1,6 +1,6 @@
 'use client';
-import { Anime, ApiResponse } from "@/interface/indes";
-import {  useEffect, useState } from "react";
+import { ApiResponse } from "@/interface/indes";
+import {  useEffect } from "react";
 
 
 

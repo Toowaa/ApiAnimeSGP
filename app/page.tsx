@@ -1,5 +1,5 @@
 import Slider from "@/components/slider";
-import { AllAnimesApi, fetchData, TierlistApi } from ".";
+import { AllAnimesApi, TierlistApi } from ".";
 import Tierlist from "@/components/tierlist";
 import { SearchApi } from "@/components/Search";
 import Cards from "@/components/items";

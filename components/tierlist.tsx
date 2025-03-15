@@ -75,7 +75,7 @@ export default function Tierlist({ AnimeList }: { AnimeList: Anime[] }) {
               height="100%"
               src={`https://www.youtube.com/embed/${selectedAnime.trailer.youtube_id}`}
               title={`${selectedAnime.title} trailer`}
-              frameBorder="0"
+
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
