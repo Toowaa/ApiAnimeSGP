@@ -12,6 +12,7 @@
     "@fontsource-variable/montserrat": "^5.2.5",
     "@fontsource-variable/open-sans": "^5.2.5",
     "embla-carousel-react": "^8.5.2",
+    "framer-motion": "^12.5.0",
     "get-apis": "file:",
     "lucide-react": "^0.481.0",
     "next": "15.2.2",
