@@ -76,7 +76,7 @@ export default function Tierlist({ AnimeList }: { AnimeList: Anime[] }) {
               </div>
             </div>
 
-            <div className="col-span-3 row-span-4 col-start-3 bg-[#F9627D] flex items-center justify-center">
+            <div className="col-span-3 row-span-4 col-start-3 bg-[#635f6088] flex items-center justify-center">
               {selectedAnime?.trailer?.youtube_id ? (
                 <iframe
                   width="100%"
@@ -88,7 +88,7 @@ export default function Tierlist({ AnimeList }: { AnimeList: Anime[] }) {
                 ></iframe>
               ) : (
                 <div className="text-white  text-center p-4">
-                  <p className="text-xl">
+                  <p className="text-2xl">
                     Selecciona un anime para ver su trailer
                   </p>
                   {selectedAnime && !selectedAnime.trailer?.youtube_id && (
@@ -111,7 +111,7 @@ export default function Tierlist({ AnimeList }: { AnimeList: Anime[] }) {
                       selectedAnime.genres.map((genre) => (
                         <span
                           key={genre.mal_id}
-                          className="px-3 py-1 bg-[#F9627D] text-white rounded-full text-sm"
+                          className="px-3 py-1 bg-pink-600 text-white rounded-full text-sm"
                         >
                           <div>{genre.name} </div>
                         </span>

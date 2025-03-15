@@ -13,11 +13,9 @@ export default async function Home() {
   return (
     <div className="pt-24 ">
       <div id="slider">
-        <Slider AnimeList={top.data} />
+        <Newslider AnimeList={top.data} />
       </div>
-      <div id="newslider">
-      <Newslider AnimeList={top.data} />
-      </div>
+     
       <div id="tierlist">
         <Tierlist AnimeList={tierlist.data} />
       </div>
