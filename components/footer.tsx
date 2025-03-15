@@ -13,12 +13,6 @@ export default function Footer() {
     { text: "Contact to Me", href: "mailto:brahanbonilla@gmail.com" },
   ];
 
-  const rightLinks = [
-    { text: "Contáctanos", href: "/contactanos" },
-    { text: "Preguntas Frecuentes", href: "/PreguntasFrecuentes" },
-    { text: "Blog", href: "/blog" },
-    { text: "Iniciar sesión", href: "/login" },
-  ];
 
   return (
     <footer className="bg-[black] text-white rounded-none  lg:rounded-t-full">
