@@ -1,18 +1,20 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
-
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
   onPageChange: (page: number) => void;
 }
 
-export const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) => {
+export const Pagination = ({
+  currentPage,
+  totalPages,
+  onPageChange,
+}: PaginationProps) => {
   const renderPageNumbers = () => {
     const pages = [];
-    const maxPagesToShow = 5; // Número máximo de páginas visibles
+    const maxPagesToShow = 5;
 
-    // Lógica para mostrar los números de página
     if (totalPages <= maxPagesToShow) {
       for (let i = 1; i <= totalPages; i++) {
         pages.push(i);
@@ -57,7 +59,10 @@ export const Pagination = ({ currentPage, totalPages, onPageChange }: Pagination
   };
 
   return (
-    <nav aria-label="Pagination" className="isolate inline-flex -space-x-px rounded-md shadow-xs">
+    <nav
+      aria-label="Pagination"
+      className="isolate inline-flex -space-x-px rounded-md shadow-xs"
+    >
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
