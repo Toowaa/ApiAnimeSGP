@@ -1,4 +1,3 @@
-import Slider from "@/components/slider";
 import { AllAnimesApi, TierlistApi, TopApi } from ".";
 import Tierlist from "@/components/tierlist";
 import { SearchApi } from "@/components/Search";
