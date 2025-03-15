@@ -1,20 +1,23 @@
 import Slider from "@/components/slider";
-import { AllAnimesApi, TierlistApi } from ".";
+import { AllAnimesApi, TierlistApi, TopApi } from ".";
 import Tierlist from "@/components/tierlist";
 import { SearchApi } from "@/components/Search";
 import Cards from "@/components/items";
+import Newslider from "@/components/newslider";
 
 export default async function Home() {
   const tierlist = await TierlistApi();
   const initialPage = 1;
   const allAnimes = await AllAnimesApi(initialPage);
-
+  const top = await TopApi();
   return (
     <div className="pt-24 ">
       <div id="slider">
-        <Slider />
+        <Slider AnimeList={top.data} />
       </div>
-
+      <div id="newslider">
+      <Newslider AnimeList={top.data} />
+      </div>
       <div id="tierlist">
         <Tierlist AnimeList={tierlist.data} />
       </div>
@@ -28,7 +31,6 @@ export default async function Home() {
           totalPages={allAnimes.pagination.last_visible_page}
         />
       </div>
-   
     </div>
   );
 }

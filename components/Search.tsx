@@ -54,8 +54,9 @@ export const SearchApi = ({
                 alt={anime.title}
                 className="w-full h-48 object-cover rounded-xl"
               />
-              <p className="text-lg font-medium mt-2 text-black">
+              <p className="text-lg font-light  mt-2 text-black">
                 {anime.title}
+                <span className="absolute bottom-0 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full inline-block duration-500"></span>
               </p>
 
               <div

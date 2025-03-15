@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { link } from "fs";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 
 
@@ -13,22 +15,27 @@ export default function Cards() {
     {
       id: "/Magazines",
       title: "Magazines",
+      link:"https://myanimelist.net/manga/magazine"
     },
     {
       id: "/Mangas",
       title: "Mangas",
+      link:"https://myanimelist.net/manga"
     },
     {
       id: "/people",
       title: "people",
+        link:"https://myanimelist.net/people/1/Tomokazu_Seki"
     },
     {
       id: "/produces",
       title: "producers",
+      link:"https://myanimelist.net/producers"
     },
     {
       id: "/reviews",
       title: "reviews",
+      link:"https://myanimelist.net/reviews"
     },
   ];
 
@@ -42,7 +49,8 @@ export default function Cards() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Ver mas detalles
+      Quedaste con ganas de ver mas, ¿no?
+      
       </motion.h2>
 
       <div className="lg:block hidden">
@@ -61,16 +69,19 @@ export default function Cards() {
                 {service.title}
               </h3>
               <div className="flex flex-col items-end mt-auto mb-5">
+                <Link href={service.link} target="_blank" rel="noopener noreferrer">
                 <button
-             
+               
                   className="group flex items-center space-x-2 text-sm hover:text-purple-200 transition-colors"
                 >
+                 
                   <span className="relative group">
                     Ver más
                     <span className="absolute bottom-0 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full duration-500"></span>
                   </span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
+                </Link>
               </div>
             </motion.div>
           ))}
