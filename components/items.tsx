@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { link } from "fs";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
